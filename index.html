@@ -43,6 +43,7 @@
     @media(max-width:560px){body{font-size:16px}.wrap{width:min(100% - 22px,1160px)}.jump .wrap{gap:2px;padding:7px 0}.jump a{font-size:11px;padding:6px}.hero h1{font-size:46px}.lead{font-size:18px}.exam-strip{margin-inline:-11px}.metric{padding:17px}.metric b{font-size:22px}section{padding:48px 0}.plan-grid,.resources{grid-template-columns:1fr}.day{display:block;background:transparent;border:0}.day div{border:1px solid var(--line);border-bottom:0}.day div:last-child{border-bottom:1px solid var(--line);margin-bottom:12px}.subject-intro{display:block}.subject-intro p{margin-top:8px}.footer-grid{display:block}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.scorebar i{transition:none}}
   </style>
+<link rel="stylesheet" href="assets/topics.css">
 </head>
 <body>
 <div class="topline"></div>
@@ -142,6 +143,17 @@
 })();
 </script>
 
+<!-- ==================== #topics — topic library (study material) ==================== -->
+<section class="topic-lib-sec" id="topics" aria-label="Study material by topic">
+<div style="max-width:1180px;margin:0 auto;padding:0 20px">
+<p class="tl-kicker">Study material</p>
+<h2 class="tl-h2">Learn it topic by topic</h2>
+<p class="tl-sub">Every card below opens a full study page for that topic — a plain-language explanation, key facts and tables, diagrams, and quick-revision questions with answers. The practice papers at the end are full timed mocks with instant scores and complete answer keys. Everything runs in your browser; nothing is sent anywhere.</p>
+<div id="topic-lib"></div>
+</div>
+</section>
+<script src="assets/topics-jee.js"></script>
+<script src="assets/topics.js"></script>
 <section class="eph-comments" id="comments" aria-label="Comments and suggestions">
   <h2>Comments &amp; suggestions</h2>
   <p class="eph-comments-note">Spotted a mistake, an outdated date, or a missing topic? Leave a comment below &mdash; it helps improve this page for everyone.</p>
