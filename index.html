@@ -42,13 +42,40 @@
     @media(max-width:820px){.hero-grid,.section-head,.pattern,.drill-grid{grid-template-columns:1fr}.hero{padding-top:38px}.hero-photo{order:-1}.hero-photo img{aspect-ratio:16/9}.photo-tag{left:10px;bottom:34px}.exam-strip{grid-template-columns:1fr 1fr}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.18)}.section-head{gap:14px}.plan-grid,.resources{grid-template-columns:1fr 1fr}.scorebox{position:relative;top:0}.day{grid-template-columns:84px 1fr}.day .time{grid-row:span 3}.chapters{grid-template-columns:1fr}.source-list{columns:1}}
     @media(max-width:560px){body{font-size:16px}.wrap{width:min(100% - 22px,1160px)}.jump .wrap{gap:2px;padding:7px 0}.jump a{font-size:11px;padding:6px}.hero h1{font-size:46px}.lead{font-size:18px}.exam-strip{margin-inline:-11px}.metric{padding:17px}.metric b{font-size:22px}section{padding:48px 0}.plan-grid,.resources{grid-template-columns:1fr}.day{display:block;background:transparent;border:0}.day div{border:1px solid var(--line);border-bottom:0}.day div:last-child{border-bottom:1px solid var(--line);margin-bottom:12px}.subject-intro{display:block}.subject-intro p{margin-top:8px}.footer-grid{display:block}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.scorebar i{transition:none}}
-  </style>
+  
+/* ---- Expansion: study material, practice bank, one-liners, free resources ---- */
+.searchbar{width:100%;max-width:560px;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:inherit;font-size:16px;margin:0 0 10px}
+.search-note,.session-note,.pb-status{color:var(--muted,#888);font-size:14px;margin:6px 0 14px}
+#study-material .study-chapters{display:grid;gap:14px;margin-top:8px}
+#study-material .chapter h3{padding:16px 18px 2px;margin:0;font-size:19px}
+#study-material .chapter .chapter-body{padding:0 18px 18px}
+#study-material .chapter .chapter-body h4{margin:16px 0 6px;font-size:16px}
+#study-material .chapter .chapter-body p{margin:8px 0;line-height:1.62}
+#study-material .chapter .chapter-body ul,#study-material .chapter .chapter-body ol{margin:8px 0;padding-left:22px;line-height:1.6}
+.resource-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.resource-card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.resource-card h3{font-size:17px;margin:8px 0 4px;line-height:1.35}
+.resource-card h3 a{color:inherit;text-decoration:none}
+.resource-card h3 a:hover{color:var(--blue)}
+.resource-card .rtype{font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted,#888);margin:0 0 8px}
+.resource-card p{font-size:14px;line-height:1.55;margin:0 0 6px}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:3px 9px;border-radius:999px}
+.badge-free{background:#0a7c3a;color:#fff}
+.ol-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:8px;list-style:none;padding:0;margin:0}
+.ol-list li{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 14px;font-size:14.5px;line-height:1.5}
+.pb-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 12px}
+.pb-controls label{font-size:14px;display:flex;gap:8px;align-items:center}
+.pb-controls select{padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:inherit;font-size:14px}
+#pbQuestions .question{margin:0 0 12px}
+#pbQuestions .topic-tag{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted,#888)}
+
+</style>
 <link rel="stylesheet" href="assets/topics.css">
 </head>
 <body>
 <div class="topline"></div>
 <nav class="jump" aria-label="Page sections"><div class="progress" id="progress"></div><div class="wrap">
-  <a href="#pattern">Pattern</a><a href="#library">Study library</a><a href="#plan">Study plan</a><a href="#practice">Practice</a><a href="#resources">Free resources</a>
+  <a href="#pattern">Pattern</a><a href="#library">Study library</a><a href="#study-material">Study material</a><a href="#plan">Study plan</a><a href="#practice">Practice</a><a href="#practice-bank">Practice bank</a><a href="#resources">Free resources</a><a href="#one-liners">One-liners</a>
 </div></nav>
 <main>
   <header class="hero"><div class="wrap hero-grid">
@@ -95,12 +122,225 @@
     </div></div>
   </div></section>
 
-  <section id="plan"><div class="wrap"><div class="section-head"><h2><span class="num">03 / 24-WEEK ROUTE</span>A repeatable system</h2><p>Keep all three subjects moving. Every week needs concept work, timed questions and an error review; otherwise familiarity gets mistaken for mastery.</p></div>
+  <section id="study-material"><div class="wrap"><div class="section-head"><h2><span class="num">03 / COMPLETE STUDY MATERIAL</span>The full syllabus, chapter by chapter</h2><p>Fourteen in-depth chapters covering the entire JEE Main + Advanced syllabus — theory, derivations, worked templates and the traps that cost marks. Type below to jump straight to a chapter.</p></div>
+    <input type="search" id="chapterSearch" class="searchbar" placeholder="Search chapters — e.g. rotation, thermodynamics, organic chemistry&#8230;" aria-label="Search study chapters">
+    <p class="search-note" id="chapterSearchNote">14 chapters · Physics 1–4, Chemistry 5–7, Maths 8–12, formula sheets &amp; tactics 13–14.</p>
+    <div class="study-chapters">
+<article class="chapter" id="ch-1">
+<h3>1. Mechanics</h3>
+<div class="chapter-body">
+<p><b>Mechanics is roughly one-third of JEE Physics</b> — both Main and Advanced. The chapters build on each other: kinematics → Newton's laws → work-energy-momentum → rotation → gravitation/SHM. Mastery of vector components and free-body diagrams is assumed throughout.</p>
+<h4>Kinematics — the projectile as a template</h4>
+<p>Projectile motion is the standard decomposition template: horizontal motion uniform, vertical motion uniformly accelerated. With launch speed u at angle θ, range R = u² sin2θ/g and maximum height H = u² sin²θ/(2g). <b>Derivation sketch:</b> x = u cosθ · t, y = u sinθ · t − ½gt²; eliminating t gives the trajectory y = x tanθ − gx²/(2u²cos²θ), a parabola. Max range at θ = 45°; complementary angles (θ, 90°−θ) give the same range. <b>Trap:</b> in relative-velocity and river-boat problems, always resolve into the frame given — many errors come from mixing frames mid-calculation.</p>
+<h4>Newton's laws — constraints and pseudo-force</h4>
+<p>For connected systems, write F = ma <b>along the constraint</b>. Two templates dominate: (i) pulley blocks — string length constant gives a₁ + a₂ = 2a₃-type constraint relations (differentiate the length equation twice); (ii) non-inertial frames — introduce pseudo-force ma₀ opposite the frame's acceleration. A classic: a block on an incline accelerating horizontally; in the frame of the wedge, equilibrium gives tanθ = a/g where θ is the angle the surface makes... but <b>trap:</b> pseudo-force acts on the body at its centre of mass and only in accelerated frames — never add it in ground-frame diagrams.</p>
+<h4>Work–energy–momentum</h4>
+<p>Work-energy theorem: W_net = ΔK, where work by conservative forces becomes potential energy (W_c = −ΔU). <b>Key result:</b> mechanical energy is conserved only when no non-conservative work acts; momentum is conserved in any collision (internal forces), but KE is conserved only in elastic collisions. For a 1-D elastic collision, relative speed of separation = relative speed of approach (Newton's experimental law with e = 1). Centre of mass: M·a_cm = ΣF_ext; with no external force, the CM cannot accelerate — template for explosion/recoil and "man walking on a plank" problems.</p>
+<h4>Rotational dynamics</h4>
+<p>Torque τ = r × F; angular momentum L = Iω (for a rigid body about a fixed axis). <b>Key results:</b> I of common bodies — ring/hoop MR², disc ½MR², solid sphere ⅖MR², hollow sphere ⅔MR², rod about centre 1/12ML² (parallel-axis theorem I = I_cm + Md² handles everything else). Rolling without slipping: v_cm = ωR and friction is <b>static</b> — it can be zero (pure rolling on a smooth-ish incline needs no friction if speeds are matched). Angular momentum is conserved about a point when net external torque about it is zero — the template for the classic "particle strikes rod/platter" problems. <b>Trap:</b> KE in general plane motion is ½Mv_cm² + ½I_cmω²; students often forget the translational term.</p>
+<h4>Gravitation and SHM</h4>
+<p>Orbital speed v₀ = √(GM/r), escape speed v_e = √(2GM/R) = √2·v₀(surface). <b>Kepler III</b> follows: T² ∝ r³, from GMm/r² = m(2π/T)²r. SHM: x = A sin(ωt + φ); energy swaps as ½kA² constant with ⟨K⟩ = ⟨U⟩ = ¼kA² over a cycle. Simple pendulum T = 2π√(l/g) holds for <b>small angles only</b> — a standard trap. In spring-block energy problems, the elastic PE ½kx² is measured from the spring's natural length, not from equilibrium (the ½kx² term already includes gravity if you use x from natural length).</p>
+<h4>Common traps across mechanics</h4>
+<p>① Normal reaction ≠ mg on inclines/banks (use components). ② Static friction self-adjusts — don't blindly use μN as friction. ③ In circular motion, centripetal force is a <b>requirement</b>, not a new force; identify which real force supplies it (tension, friction, normal, gravity). ④ Sign consistency in work integrals. ⑤ Advanced loves "comprehension" items mixing two topics (e.g., spring + rotation); read the full stem before choosing a method.</p>
+</div>
+</article>
+
+<article class="chapter" id="ch-2">
+<h3>2. Electrodynamics</h3>
+<div class="chapter-body">
+<p><b>Electrodynamics is the other heavyweight of JEE Physics</b>, split between electrostatics + capacitance, current electricity, magnetism, EMI/AC, and EM waves. The pattern of the paper: one fact-heavy conceptual question and one multi-step numerical per block.</p>
+<h4>Electrostatics — fields, flux, potential</h4>
+<p>Coulomb's law plus superposition gives everything; <b>Gauss's law</b> (∮E·dA = Q_enclosed/ε₀) is the shortcut for symmetric charge distributions — infinite sheet E = σ/2ε₀, spherical shell E = 0 inside and kQ/r² outside, infinite line E = λ/(2πε₀r). Potential is scalar: V = Σkqᵢ/rᵢ, and <b>E = −∇V</b> (field points downhill in potential). <b>Key result:</b> in electrostatic equilibrium, a conductor is an equipotential; all excess charge sits on the surface. Method of images appears in Advanced for a point charge near a grounded conducting plane — the image charge −q placed symmetrically gives zero potential on the plane. <b>Trap:</b> zero net flux ≠ zero field; Gauss's law speaks of enclosed charge only.</p>
+<h4>Capacitance and dielectrics</h4>
+<p>Parallel plate C = ε₀A/d; series 1/C = Σ1/Cᵢ; parallel C = ΣCᵢ. Stored energy U = ½CV² = Q²/2C = ½QV. <b>Template:</b> battery connected vs. disconnected — connected keeps V constant (charge changes with C), disconnected keeps Q constant (voltage changes). Inserting a dielectric multiplies C by K: if isolated, field inside drops and V drops; if connected to a battery, extra charge flows in. <b>Trap:</b> with dielectrics, use D = εE and Gauss's law on <i>free</i> charge; many marks are lost mixing bound and free charge.</p>
+<h4>Current electricity</h4>
+<p>Drift model: I = neAv_d; microscopic Ohm's law j = σE. Kirchhoff's laws (junction: ΣI = 0; loop: ΣV = 0) plus symmetry solve nearly every network. <b>Standard templates:</b> (i) Wheatstone bridge balance (P/Q = R/S) — no current through the middle branch, which can be removed; (ii) infinite ladder networks — assume equivalent resistance X, then X = R + (R′||X) and solve the quadratic; (iii) potentiometer null point E = E₀·l/L, galvanometer-independent. Heating: P = I²R = V²/R. <b>Trap:</b> internal resistance — terminal voltage V = E − Ir, max power transfer at R = r (Advanced sometimes asks for the proof).</p>
+<h4>Magnetism</h4>
+<p>Biot–Savart for finite elements; Ampere's law ∮B·dl = μ₀I_enclosed for symmetric currents (solenoid B = μ₀nI, toroid B = μ₀NI/(2πr), straight wire B = μ₀I/(2πr)). Lorentz force F = q(v × B) — <b>direction by right-hand rule</b>; a charge in uniform B moves in a circle of radius r = mv/(qB), cyclotron frequency ω = qB/m (independent of v — the cyclotron principle). Torque on a loop τ = NIAB sinθ; moving-coil galvanometer uses τ = NBIA balanced by spring torque. <b>Trap:</b> magnetic forces do no work (F ⊥ v) — speed of a charge in a pure magnetic field never changes; if a problem says it speeds up, an electric field must be present.</p>
+<h4>EMI, AC, and EM waves</h4>
+<p>Faraday: ε = −dΦ/dt; Lenz's law fixes the sign (induced current opposes the change). Motional emf ε = Blv; self-inductance ε = −L dI/dt; energy in an inductor ½LI². <b>AC template:</b> impedance Z = √(R² + (X_L − X_C)²); resonance at ω₀ = 1/√(LC) where current is maximum and power factor = 1; average power P = V_rms I_rms cosφ. LC oscillations exchange ½LI² ↔ ½q²/C at ω = 1/√(LC) — structurally identical to SHM. EM waves: E/B = c, Poynting vector S = (1/μ₀)E × B, and radiation pressure 2I/c on a perfect reflector. <b>Trap:</b> rms vs. peak values (V₀ = √2 V_rms); AC meters read rms.</p>
+<h4>Revision checklist</h4>
+<p>Memorise: all Gauss-law field formulas, the two capacitor-battery cases, Wheatstone balance, cyclotron radius/frequency, Faraday–Lenz sign convention, resonance condition, and the full SI set (ε₀, μ₀, k = 1/4πε₀, c). In Advanced, expect one paragraph-type question where a changing B-field geometry forces you to combine Faraday with a loop integral — draw the symmetry before writing anything.</p>
+</div>
+</article>
+
+<article class="chapter" id="ch-3">
+<h3>3. Optics &amp; Modern Physics</h3>
+<div class="chapter-body">
+<p><b>Ray optics rewards formula discipline; wave optics rewards path-difference thinking; modern physics rewards knowing the experiment that settled each question.</b> Together they carry roughly 15–20% of the Physics paper.</p>
+<h4>Ray optics — reflection and refraction</h4>
+<p>Mirror formula 1/v + 1/u = 1/f with the Cartesian sign convention (light travels left → right; distances left of the pole/mirror negative... adopt <b>one</b> convention and never mix). Refraction: Snell's law n₁ sinθ₁ = n₂ sinθ₂; total internal reflection when going denser → rarer with θ &gt; θ_c = sin⁻¹(n₂/n₁) — the basis of optical fibres and the "sparkling diamond" questions. Lensmaker's formula: 1/f = (μ − 1)(1/R₁ − 1/R₂). <b>Standard template:</b> silvered lens / mirror-lens combinations — light passes through the lens, reflects, passes again: effective power P = 2P_lens + P_mirror. Prism: δ = (μ − 1)A for small A; at minimum deviation μ = sin[(A + δ_m)/2]/sin(A/2), and the ray inside is parallel to the base. <b>Trap:</b> a convex lens in a denser medium can turn concave in behaviour (μ_lens &lt; μ_medium); always compute relative μ.</p>
+<h4>Wave optics — interference and diffraction</h4>
+<p>Young's double slit: fringe width β = λD/d; path difference Δ = d sinθ gives bright fringes at Δ = nλ, dark at (n + ½)λ. Intensity I = 4I₀cos²(δ/2) — <b>bright fringes are equally spaced but intensity modulation is the real test</b>. Thin-film interference: path 2μt with a π phase flip on reflection from the denser medium; Newton's rings radius r_n² = nλR (dark centre because of the flip). Single-slit diffraction: first minimum at a sinθ = λ; resolving power of a microscope/telescope scales with aperture (Rayleigh θ ≈ 1.22λ/D — approximate). <b>Trap:</b> coherence is assumed — with incoherent sources there are no stable fringes; also, white light gives a central white fringe with coloured edges, not a missing centre.</p>
+<h4>Photoelectric effect and matter waves</h4>
+<p>Einstein's equation: hν = φ₀ + K_max, with stopping potential eV₀ = K_max. <b>Key facts:</b> photocurrent ∝ intensity (at fixed ν), K_max depends only on ν, emission is instantaneous, and below threshold frequency ν₀ nothing happens no matter how intense the light. Matter waves: λ = h/p (de Broglie); Davisson–Germer confirmed it. Bohr model: mvr = nℏ, r_n = n²a₀, E_n = −13.6/n² eV for hydrogen — the Rydberg formula 1/λ = R(1/n₁² − 1/n₂²) names Lyman (n₁=1, UV), Balmer (n₁=2, visible), Paschen/Brackett/Pfund series. <b>Trap:</b> "energy of photon" vs. "energy of electron transition" — emission/absorption lines come from ΔE between levels, not from level values themselves.</p>
+<h4>X-rays and nuclear physics</h4>
+<p>X-rays: continuous (bremsstrahlung, λ_min = hc/eV) + characteristic lines from inner-shell transitions (K_α: L → K). <b>Moseley's law</b> √ν = a(Z − b) — the experiment that ordered the periodic table by atomic number. Nuclear: binding energy from mass defect Δm·c²; the BE-per-nucleon curve peaks at Fe-56 — fusion of light nuclei and fission of heavy ones both release energy. Radioactive decay: N = N₀e^(−λt), half-life t_½ = ln2/λ; <b>activity</b> A = λN. Successive disintegration and the secular-equilibrium template appear in Advanced; for Main, one-step half-life arithmetic suffices. <b>Trap:</b> after n half-lives, remaining fraction is (½)ⁿ — students sometimes write 1 − (½)ⁿ, which is the <i>decayed</i> fraction.</p>
+<h4>Semiconductors (Main-focused)</h4>
+<p>Know: intrinsic vs. extrinsic (n-type: pentavalent donor; p-type: trivalent acceptor), the p-n junction's depletion region and barrier potential (~0.7 V Si, ~0.3 V Ge), diode I–V asymmetry, Zener as voltage regulator in reverse breakdown, and the three transistor configurations with CE as the amplifier (current gain β). Logic gates — truth tables of AND, OR, NOT, NAND, NOR, XOR and De Morgan's laws. <b>Trap:</b> a forward-biased diode in a circuit is a 0.7 V drop (approx.), not a short; reverse-biased is an open (approx.), not a resistor.</p>
+</div>
+</article>
+
+<article class="chapter" id="ch-4">
+<h3>4. Heat, Thermodynamics &amp; Waves</h3>
+<div class="chapter-body">
+<p><b>Thermodynamics is the highest marks-per-effort chapter in Physics</b> — a small set of laws generates endless numericals. Waves and sound follow the same pattern: a few wave equations, many templates.</p>
+<h4>Kinetic theory and calorimetry</h4>
+<p>Ideal gas: PV = nRT; kinetic derivation gives P = ⅓ρ⟨c²⟩, hence ⟨KE⟩ per molecule = ³⁄₂kT — temperature <i>is</i> mean translational KE. <b>Degrees of freedom:</b> C_v = (f/2)R, C_p = C_v + R (Mayer), γ = C_p/C_v = 1 + 2/f: monoatomic 5/3, diatomic 7/5 (at room temperature; vibrational modes freeze out — a classic Advanced conceptual point). Calorimetry: heat lost = heat gained; phase changes absorb mL at constant T. <b>Trap:</b> in mixture problems, check whether the final state is a mixture at some T or whether one component changes phase first — always test the "no phase change" assumption before using it.</p>
+<h4>First and second laws</h4>
+<p>First law: ΔU = Q − W (physics sign convention: W = work <i>by</i> the system; chemistry often uses ΔU = Q + W with W = work <i>on</i> — <b>know which convention the question uses</b>). U is a state function; Q and W are path functions. Processes: isothermal (ΔU = 0, W = nRT ln(V₂/V₁)), adiabatic (Q = 0, PV^γ = const, W = (P₁V₁ − P₂V₂)/(γ−1)), isobaric (W = PΔV), isochoric (W = 0). On a P–V diagram the cycle's area is the net work; clockwise = engine. <b>Second law:</b> no engine beats Carnot: η_max = 1 − T_c/T_h (Kelvin scale only). Entropy change for reversible isothermal expansion ΔS = nR ln(V₂/V₁); the universe's entropy never decreases. <b>Trap:</b> "adiabatic" does not mean "isothermal"; free expansion into vacuum is adiabatic <i>and</i> irreversible with W = 0, ΔU = 0 (ideal gas) — Joule expansion.</p>
+<h4>Heat transfer</h4>
+<p>Conduction: Q/t = kAΔT/l — thermal resistance R_th = l/(kA) adds in series exactly like electrical resistors; composite-slab problems are resistor networks. Radiation: Stefan–Boltzmann P = σAT⁴ (black body); a body at T in surroundings T₀ radiates net σA(T⁴ − T₀⁴). <b>Wien's law</b> λ_mT = b explains colour shift with temperature. <b>Trap:</b> emissivity e multiplies σAT⁴ for grey bodies; Kirchhoff's law (good absorber = good emitter) settles the conceptual questions.</p>
+<h4>Waves, sound, and Doppler</h4>
+<p>Wave speed v = fλ; the wave equation y = A sin(kx − ωt ± φ) with k = 2π/λ, ω = 2πf. <b>Standing waves:</b> string fixed at both ends L = nλ/2, f_n = nv/(2L); organ pipes — closed: L = (2n−1)λ/4 (odd harmonics only), open: L = nλ/2. Beats: f_beat = |f₁ − f₂| — the standard "tuning fork + wax" template (loading wax <i>decreases</i> fork frequency). <b>Doppler:</b> f′ = f(v ± v_o)/(v ∓ v_s) — numerator + when observer moves toward source; denominator − when source moves toward observer. Memorise it as "top follows the observer, bottom opposes the source." <b>Trap:</b> wind speed adds to v in both numerator and denominator; a moving reflector is a double Doppler (source→reflector, then reflector→observer).</p>
+<h4>Extra drill — expansion and Doppler sign errors</h4>
+<p>Thermal expansion: ΔL = αLΔT (linear), ΔV = 3αVΔT (isotropic volume — approximate for small ΔT). In "heated ring on a rod" problems, both expand — compute the clearance change, not one side alone. For Doppler, the two most common sign errors are swapping the observer and source terms and forgetting that a receding source <i>increases</i> the denominator. A quick sanity check: approaching → higher pitch, receding → lower; if your formula disagrees, flip the signs. Supersonic sources (v_s &gt; v) produce a Mach cone with sinθ = v/v_s — no Doppler formula applies.</p>
+<h4>Problem templates that repeat</h4>
+<p>① P–V cycle work from graph area + first-law bookkeeping for Q. ② Slab-in-series steady-state temperature at the junction. ③ Resonant air column: end correction e ≈ 0.6r sometimes included — read the question. ④ Carnot engine + refrigerator COP = T_c/(T_h − T_c). ⑤ RMS speed ratios c_rms = √(3RT/M) — Graham's law of effusion follows. In Advanced, expect a thermodynamics-mechanics hybrid (e.g., gas in a cylinder with a moving piston) — write the mechanical equilibrium and the first law as two separate equations, then couple them.</p>
+</div>
+</article>
+
+<article class="chapter" id="ch-5">
+<h3>5. Physical Chemistry</h3>
+<div class="chapter-body">
+<p><b>Physical chemistry is formula-heavy but the most scoring part of Chemistry</b> — every question reduces to a small set of equations plus unit/mole discipline. Never skip the mole concept: it is the single most tested idea in disguise.</p>
+<h4>Mole concept and stoichiometry</h4>
+<p>1 mol = 6.022×10²³ entities; n = mass/M = V/22.4 L at STP (0 °C, 1 atm) = particles/N_A. <b>Limiting reagent</b> template: convert every reactant to moles, divide by its stoichiometric coefficient, smallest wins. Empirical formula from % composition: divide each % by atomic mass, then by the smallest, scale to integers. <b>Traps:</b> (i) "STP" vs "SATP" (25 °C, 1 bar → 24.8 L/mol) — JEE uses STP unless stated; (ii) normality/molarity with diprotic acids and redox — equivalents = moles × n-factor; (iii) eudiometry (gas combustion analysis) is just limiting-reagent in reverse.</p>
+<h4>Atomic structure</h4>
+<p>Quantum numbers: n, l (0 to n−1), m (−l to +l), s (±½). Aufbau + Pauli + Hund fill orbitals; <b>exceptions</b> Cr ([Ar]3d⁵4s¹) and Cu ([Ar]3d¹⁰4s¹) — half/full d-subshell stability beats the filling order. Bohr orbits for hydrogen-like species: E_n = −13.6 Z²/n² eV, r_n = 0.529 n²/Z Å. Photoelectric and de Broglie appear here too (see Physics ch. 3 — same equations). <b>Trap:</b> number of radial nodes = n − l − 1, angular nodes = l; total nodes = n − 1. Spectral series questions are quick marks if you know Lyman/Balmer/Paschen by n₁.</p>
+<h4>Chemical equilibrium</h4>
+<p>K_p = K_c(RT)^(Δn_g) — <b>memorise the exponent sign</b> (Δn_g = gaseous products − reactants). Le Chatelier: pressure shifts equilibrium toward fewer gas moles; temperature toward the endothermic side; catalysts change rate only, never K. <b>Templates:</b> (i) degree of dissociation α from K_p for A ⇌ 2B-type: set up the ICE table with initial moles a, dissociated aα; (ii) simultaneous equilibria multiply K's; (iii) heterogeneous equilibria exclude pure solids/liquids from the expression. <b>Trap:</b> K has no units in the thermodynamic definition (activities), but JEE numericals use concentration/pressure units freely — follow the question's convention.</p>
+<h4>Ionic equilibrium — pH arithmetic</h4>
+<p>K_w = 10⁻¹⁴ (25 °C); pH + pOH = 14. Weak acid: [H⁺] = √(K_a·C) (approx., valid when α &lt; 5%); Ostwald's law α = √(K_a/C). <b>Buffer:</b> Henderson–Hasselbalch pH = pK_a + log([salt]/[acid]); max buffer capacity at 1:1 ratio. Salt hydrolysis: only the salt of weak acid/strong base (basic, pH &gt; 7), strong acid/weak base (acidic), weak–weak (pH ≈ 7 + ½(pK_a − pK_b)). Solubility product: K_sp = [cation]^m[anion]^n; precipitation when ionic product &gt; K_sp; <b>common-ion effect</b> suppresses solubility. Titration curves: equivalence pH &gt; 7 for weak acid–strong base (choose phenolphthalein), &lt; 7 for strong acid–weak base (methyl orange). <b>Trap:</b> pH of 10⁻⁸ M HCl is not 8 — water's own H⁺ (10⁻⁷ M) dominates; compute total [H⁺] ≈ 1.1×10⁻⁷, pH ≈ 6.96.</p>
+<h4>Thermodynamics, kinetics, electrochemistry</h4>
+<p><b>Chemical thermodynamics:</b> ΔG = ΔH − TΔS; spontaneity from the sign table (ΔH&lt;0, ΔS&gt;0 always spontaneous). ΔG° = −RT ln K links free energy to equilibrium. Hess's law: ΔH is path-independent — formation enthalpies give reaction enthalpies via ΣνΔH_f(products) − ΣνΔH_f(reactants). Bond-enthalpy method is approximate (label it as such). <b>Kinetics:</b> rate = k[A]^m[B]^n; orders from experiment, not stoichiometry. Zero order: [A] = [A]₀ − kt, t_½ = [A]₀/2k; first order: ln[A] = ln[A]₀ − kt, t_½ = 0.693/k (independent of [A]₀); second order: 1/[A] = 1/[A]₀ + kt. Arrhenius k = Ae^(−E_a/RT); log(k₂/k₁) = (E_a/2.303R)(1/T₁ − 1/T₂). <b>Electrochemistry:</b> E°_cell = E°_cathode − E°_anode; ΔG° = −nFE°; Nernst E = E° − (0.0591/n)log Q (25 °C). Conductivity κ = G·l/A; molar conductivity Λ_m = κ×1000/M; Kohlrausch Λ°_m = Σνλ° for weak electrolytes. <b>Traps:</b> (i) sign of E°_cell — always cathode minus anode with <i>reduction</i> potentials; (ii) Faraday's laws: w = (E·Q)/96500 — equivalent weight, not molar mass, for redox; (iii) salt bridge maintains neutrality, never participates.</p>
+<h4>Surface chemistry &amp; states of matter (Main)</h4>
+<p>Freundlich x/m = kP^(1/n); Langmuir is the monolayer model. Colloids: Tyndall effect, electrophoresis, Hardy–Schulze rule (higher charge = stronger coagulation). Real gases: van der Waals (P + a/V²)(V − b) = RT — a corrects attraction, b corrects volume; compressibility Z = PV/RT. <b>Trap:</b> critical constants T_c = 8a/(27Rb), P_c = a/(27b²), V_c = 3b — derive, don't rote-memorise, if time permits.</p>
+</div>
+</article>
+
+<article class="chapter" id="ch-6">
+<h3>6. Inorganic Chemistry</h3>
+<div class="chapter-body">
+<p><b>Inorganic chemistry is fact-dense but highly predictable</b> — JEE repeats the same trends, the same exceptional elements, and the same coloured compounds year after year. Learn trends as <i>reasons</i> (shielding, effective nuclear charge, penetration), not as lists.</p>
+<h4>Periodic trends</h4>
+<p>Across a period, Z_eff rises → atomic/ionic radius falls, ionisation enthalpy rises, electron gain enthalpy becomes more negative. Down a group, shielding wins → radius rises, IE falls. <b>Memorise the exceptions:</b> (i) N &gt; O in first IE (half-filled p stability); (ii) Be &gt; B, Mg &gt; Al (s-electron removal vs p); (iii) Cl has the most negative electron gain enthalpy (F's small size → electron-electron repulsion); (iv) noble gases have positive EGE. Electronegativity (Pauling): F highest (4.0). <b>Trap:</b> "atomic radius" comparisons must specify covalent vs. van der Waals vs. ionic — JEE usually means the trend, but check.</p>
+<h4>Chemical bonding</h4>
+<p><b>VSEPR:</b> count electron domains; lone pairs compress angles (NH₃ 107°, H₂O 104.5° vs. ideal 109.5°). Standard geometries: linear (BeCl₂, CO₂), trigonal planar (BF₃), tetrahedral (CH₄), trigonal bipyramidal (PCl₅), octahedral (SF₆), see-saw (SF₄), T-shape (ClF₃), square planar (XeF₄), linear (XeF₂). <b>MOT:</b> bond order = ½(N_b − N_a); magnetic behaviour from unpaired electrons — O₂ is paramagnetic (the famous MOT triumph: B.O. 2, two unpaired), N₂ diamagnetic (B.O. 3). B₂ and C₂ need the <i>s-p mixing</i> order (σ2s &lt; σ*2s &lt; π2p &lt; σ2p...): B₂ (B.O. 1, paramagnetic), C₂ (B.O. 2, diamagnetic). <b>Fajan's rules:</b> small highly-charged cation + large polarisable anion → covalent character → lower melting point, higher solubility in organic solvents (AlCl₃ covalent/dimeric vs. NaCl ionic). Hydrogen bonding: H–F &gt; H–O &gt; H–N in strength; explains H₂O's liquid state and ice's open structure. <b>Trap:</b> bond order from Lewis structures can mislead (CO has B.O. 3 by MOT, not 2); trust MOT for diatomics.</p>
+<h4>Coordination compounds</h4>
+<p><b>IUPAC naming</b> (ligands alphabetical, then metal with oxidation state; anionic complex → -ate suffix) is tested directly. <b>Isomerism:</b> ionisation, linkage (NO₂⁻ vs ONO⁻), coordination, hydrate — structural; geometrical (cis/trans, fac/mer) and optical — stereo. <b>CFT:</b> octahedral splits t₂g (lower) / e_g; Δ_o vs. pairing energy P decides high/low spin: weak-field ligands (I⁻ &lt; Br⁻ &lt; Cl⁻ &lt; F⁻ &lt; H₂O) → high spin; strong-field (CN⁻, CO, en) → low spin. Spectrochemical series is worth memorising. CFSE = (−0.4x + 0.6y)Δ_o (+ pairing corrections). Colour: d–d transitions absorb visible light (complementary colour seen); <b>charge-transfer</b> bands (MnO₄⁻ purple, Cr₂O₇²⁻ orange) are far more intense. <b>Trap:</b> tetrahedral splitting Δ_t = ⁴⁄₉Δ_o — always high spin (Δ_t &lt; P always); square planar (d⁸, e.g., [Ni(CN)₄]²⁻) is diamagnetic.</p>
+<h4>p-block, d-block, and metallurgy</h4>
+<p><b>p-block trends:</b> inert-pair effect grows down groups 13–14 (Pb²⁺, Bi³⁺ stable); catenation C &gt;&gt; Si; N₂'s triple bond vs. P₄'s single bonds (pπ–pπ overlap fails for larger atoms). Oxyacids: strength rises with oxidation state of central atom (HClO₄ &gt; HClO₃ &gt; HClO₂ &gt; HClO). Interhalogens: ClF₃ (T-shape), IF₇ (pentagonal bipyramidal). Noble gases: XeF₂ (linear), XeF₄ (square planar), XeF₆ (distorted octahedral), XeO₃ (pyramidal). <b>d-block:</b> variable oxidation states (Mn: +2 to +7), coloured ions, paramagnetism, catalytic activity. Know the colours cold: Cu²⁺ blue, Fe³⁺ yellow-brown, MnO₄⁻ purple, Cr₂O₇²⁻ orange, CrO₄²⁻ yellow, Ni²⁺ green. KMnO₄ oxidises in acid (MnO₄⁻ → Mn²⁺, 5e⁻) and in alkaline (→ MnO₂); K₂Cr₂O₇ in acid (→ 2Cr³⁺, 6e⁻). <b>Metallurgy:</b> Ellingham diagram — lower ΔG oxide line reduces the higher (carbon reduces Fe₂O₃ above ~700 °C; Al reduces Cr₂O₃ — thermite). Refining: zone refining (Si, Ge), van Arkel (Ti, Zr), Mond process (Ni via Ni(CO)₄). <b>Trap:</b> Ellingham predictions are thermodynamic, not kinetic — "spontaneous" doesn't mean "fast".</p>
+<h4>Qualitative analysis (salt analysis)</h4>
+<p>Flame colours: Na golden yellow, K lilac, Ca brick red, Ba apple green, Cu blue-green. Borax bead: Co blue, Cr green, Cu blue (oxidising). <b>Group separation logic:</b> Group II (Cu²⁺, Pb²⁺, Cd²⁺...) precipitates as sulphides in acidic H₂S (low [S²⁻] — only very insoluble sulphides fall); Group IIIA (Al³⁺, Fe³⁺, Cr³⁺) as hydroxides with NH₄Cl + NH₄OH (common-ion keeps [OH⁻] low); Group IV (Zn²⁺, Mn²⁺, Ni²⁺, Co²⁺) as sulphides in ammoniacal H₂S. Confirmatory tests: Fe³⁺ + SCN⁻ → blood-red; Cu²⁺ + NH₃ → deep blue [Cu(NH₃)₄]²⁺; Ag⁺ + Cl⁻ → white AgCl soluble in NH₃. <b>Trap:</b> NH₄Cl's role is the common-ion effect — without it, Mg²⁺ would precipitate in Group III.</p>
+</div>
+</article>
+
+<article class="chapter" id="ch-7">
+<h3>7. Organic Chemistry</h3>
+<div class="chapter-body">
+<p><b>Organic chemistry is mechanism logic, not memorisation.</b> JEE tests whether you can push electrons: every named reaction is a sequence of nucleophilic attack, proton transfer, and leaving-group departure. Learn the <i>why</i> once; the reactions follow.</p>
+<h4>Electronic effects and reactive intermediates</h4>
+<p>Inductive (−I: NO₂ &gt; CN &gt; F &gt; Cl &gt; Br; +I: alkyl groups), resonance/mesomeric (∓M), and hyperconjugation. <b>Carbocation stability:</b> 3° &gt; 2° &gt; 1° &gt; methyl (hyperconjugation + +I); allylic/benzylic beat even 3° via resonance — but the cyclopropylmethyl and antiaromatic cases are Advanced traps. Carbanion stability reverses (resonance-stabilised &gt; 1° &gt; 2° &gt; 3°); free radicals follow the carbocation order. <b>Acidity:</b> electron-withdrawing groups stabilise the conjugate base — pK_a: phenol (~10) &lt; carbonic acid (~6.4) &lt; carboxylic acids (~4–5) &lt; mineral acids; picric acid (2,4,6-trinitrophenol) is far stronger than phenol. <b>Basicity:</b> aliphatic amines: 2° &gt; 1° ≈ 3° (aqueous — solvation scrambles the gas-phase order); aromatic amines are weak bases (lone pair delocalised); amides are essentially non-basic. <b>Trap:</b> ortho-substituted anilines are weaker bases than para (steric inhibition of resonance) — the "ortho effect".</p>
+<h4>Isomerism and stereochemistry</h4>
+<p>Chain, position, functional, metamerism, tautomerism (keto ⇌ enol — the enol content follows conjugation/stability). <b>Optical isomerism:</b> chiral centre (four different groups) → enantiomers (non-superimposable mirror images, identical properties except optical rotation and chiral environments); meso compounds have internal compensation (optically inactive despite stereocentres). R/S assignment by Cahn–Ingold–Prelog priority; E/Z for alkenes. <b>Key results:</b> SN1 racemises (planar carbocation attacked from both faces — approx. racemic mixture); SN2 inverts (Walden inversion); elimination stereochemistry is anti-periplanar (E2). <b>Trap:</b> a meso compound and its "mirror image" are identical — counting stereoisomers, meso forms count once; for n stereocentres with symmetry, the 2ⁿ rule overcounts.</p>
+<h4>Reaction mechanisms — the core six</h4>
+<p>① <b>Electrophilic addition to alkenes:</b> Markovnikov (proton adds to the less-substituted carbon; the more stable carbocation forms) — HBr/peroxide gives anti-Markovnikov via radicals. Oxymercuration–demercuration = Markovnikov hydration without rearrangement; hydroboration–oxidation = anti-Markovnikov syn hydration. ② <b>SN1/SN2:</b> SN1 — 3° halides, polar protic solvent, rate = k[RX], racemisation, rearrangements possible; SN2 — 1° halides, polar aprotic solvent, rate = k[RX][Nu⁻], inversion, no rearrangement. ③ <b>E1/E2:</b> bulky base + heat → Hofmann (less-substituted alkene); Saytzeff/Zaitsev otherwise. ④ <b>Electrophilic aromatic substitution:</b> activating ortho/para directors (OH, NH₂, alkyl — +M/+I/+hyperconjugation) vs. deactivating meta directors (NO₂, CN, CHO — −M); halogens are deactivating but ortho/para directing (the classic paradox). Nitration (HNO₃/H₂SO₄ → NO₂⁺), Friedel–Crafts (anhydrous AlCl₃; fails with deactivating groups and with NH₂ — forms a complex). ⑤ <b>Nucleophilic addition to carbonyls:</b> HCN, NaHSO₃, Grignard (forms new C–C bond; never with acidic protons present), aldol (dilute NaOH, α-H required), Cannizzaro (no α-H: 2PhCHO → PhCH₂OH + PhCOO⁻). ⑥ <b>Carboxylic derivatives:</b> reactivity RCOCl &gt; (RCO)₂O &gt; RCOOR &gt; RCONH₂ toward nucleophilic acyl substitution; HVZ (Br₂/red P) α-brominates acids.</p>
+<h4>Name reactions and distinguishing tests</h4>
+<p><b>Must-know named reactions:</b> Wurtz (alkyl halide + Na → alkane, dry ether), Fittig, Wurtz–Fittig, Grignard formation, Reimer–Tiemann (phenol + CHCl₃/NaOH → salicylaldehyde), Kolbe (phenol + CO₂ → salicylic acid), Gattermann–Koch (benzene + CO/HCl → benzaldehyde), Clemmensen (Zn–Hg/HCl, C=O → CH₂) vs. Wolff–Kishner (NH₂NH₂/KOH — base-stable substrates), Hoffmann bromamide (amide → 1° amine, one carbon shorter), Sandmeyer (ArN₂⁺ → ArCl/ArBr/ArCN), Balz–Schiemann (→ ArF), Gabriel phthalimide (pure 1° amines), Hinsberg test (distinguishes 1°/2°/3° amines). <b>Distinguishing tests:</b> Tollens' (aldehydes → silver mirror; ketones negative), Fehling's (aliphatic aldehydes), iodoform (CH₃CO– or CH₃CH(OH)– groups → yellow CHI₃), Lucas test (3° alcohol → immediate turbidity; 1° needs heat), Victor Meyer. <b>Trap:</b> benzaldehyde gives Tollens' positive but Fehling's negative; formic acid gives both Tollens' and Fehling's (it's both acid and aldehyde-like).</p>
+<h4>Biomolecules and polymers (Main)</h4>
+<p>Glucose: open chain ⇌ α/β pyranose (Haworth); mutarotation; osazone formation needs free –CHO (fructose also forms the same osazone — Advanced favourite). Amino acids: zwitterions, isoelectric point; proteins — primary (sequence), secondary (α-helix/β-sheet, H-bonding), tertiary, quaternary. <b>Polymers:</b> addition (polythene, PVC, Teflon — free-radical) vs. condensation (nylon-6,6; terylene/dacron; bakelite). Natural rubber is cis-polyisoprene; vulcanisation adds sulphur cross-links. <b>Trap:</b> nylon-6 (from caprolactam) vs. nylon-6,6 (hexamethylenediamine + adipic acid) — different monomers, frequently confused.</p>
+</div>
+</article>
+<article class="chapter" id="ch-8"><h3>8. Algebra</h3><div class="chapter-body">
+<h4>Quadratic equations</h4>
+<p>For ax² + bx + c = 0 (a ≠ 0), roots α, β satisfy α + β = −b/a, αβ = c/a. The discriminant D = b² − 4ac controls the nature: D &gt; 0 two distinct real roots, D = 0 equal roots, D &lt; 0 non-real conjugate pair. A standard derivation worth memorizing: completing the square gives a(x + b/2a)² = b² − 4ac, which yields the quadratic formula x = [−b ± √(b² − 4ac)]/2a directly. Location of roots: both roots less than k ⟺ D ≥ 0, −b/2a &lt; k, and f(k) &gt; 0 (with a &gt; 0); both greater than k is the mirror. Exactly one root between k₁ and k₂ ⟺ f(k₁)·f(k₂) &lt; 0. The classic trap: "both roots negative" requires D ≥ 0 AND −b/a &lt; 0 AND c/a &gt; 0 — students forget the discriminant check and accept the pair of inequalities alone.</p>
+<h4>Sequences and series</h4>
+<p>Arithmetic: T<sub>n</sub> = a + (n−1)d, S<sub>n</sub> = n/2·(2a + (n−1)d). Geometric: T<sub>n</sub> = ar<sup>n−1</sup>, S<sub>n</sub> = a(r<sup>n</sup>−1)/(r−1), and S<sub>∞</sub> = a/(1−r) for |r| &lt; 1. Derivation of the GP sum is the multiply-and-subtract trick: S − rS = a − ar<sup>n</sup>. Harmonic progressions: convert to AP via reciprocals; insert-means questions reduce to the same trick. AM–GM–HM: A ≥ G ≥ H for positive numbers, equality iff all equal — the single most used inequality in JEE algebra problems. The AM–GM of two numbers gives x + 1/x ≥ 2 for x &gt; 0; the sign flips the result to x + 1/x ≤ −2 for x &lt; 0, a frequent sign trap. Sum-of-special-series formulas: Σn = n(n+1)/2, Σn² = n(n+1)(2n+1)/6, Σn³ = [n(n+1)/2]². Advanced pattern: telescoping via partial fractions (1/[n(n+1)] = 1/n − 1/(n+1)) and the "difference of terms" method T<sub>n</sub> = f(n+1) − f(n) for AGP-like sums such as Σ n·2<sup>n</sup>: write S = 1·2 + 2·2² + …, 2S = 1·2² + 2·2³ + …, subtract to get S = n·2<sup>n+1</sup> − 2<sup>n+1</sup> + 2.</p>
+<h4>Binomial theorem</h4>
+<p>(x + a)<sup>n</sup> = Σ C(n,r) x<sup>n−r</sup>a<sup>r</sup>. General term T<sub>r+1</sub> = C(n,r)x<sup>n−r</sup>a<sup>r</sup>; middle terms split depending on parity of n. Key identities: ΣC(n,r) = 2<sup>n</sup> (put x = 1), Σ(−1)<sup>r</sup>C(n,r) = 0, Σr·C(n,r) = n·2<sup>n−1</sup> (differentiate (1+x)<sup>n</sup> then set x = 1), Σr²C(n,r) = n(n+1)2<sup>n−2</sup> (apply x·d/dx twice). Greatest-term problems: compare T<sub>r+1</sub>/T<sub>r</sub> = [(n−r+1)/r]·(a/x) and locate where the ratio crosses 1 — never assume it is the middle term for non-unit ratios. Multinomial expansion coefficient of x<sup>p</sup>y<sup>q</sup>z<sup>r</sup> in (x+y+z)<sup>n</sup> is n!/(p!q!r!). Remainder problems (modular arithmetic on binomial expansions): reduce (1+x)<sup>n</sup> mod m by expanding and discarding terms divisible by m — e.g. 9<sup>10</sup> = (10−1)<sup>10</sup> = (multiple of 100) − 10·10 + 1 ≡ 1 mod 100? Careful: C(10,1)·10·(−1)<sup>9</sup> = −100, all higher terms carry 10², so 9<sup>10</sup> ≡ 1 (mod 100). Trap: binomial theorem with fractional/negative n uses the generalized infinite series, not the finite sum.</p>
+<h4>Complexities beyond: P&amp;C, probability, determinants-in-algebra</h4>
+<p>Permutation-counting hinges on gap method (first place the fixed blocks, then fill gaps) and the derangement D<sub>n</sub> = n!(1 − 1/1! + 1/2! − … + (−1)<sup>n</sup>/n!). Probability identities: P(A∪B) = P(A)+P(B)−P(A∩B), Bayes' theorem P(E<sub>i</sub>|A) = P(A|E<sub>i</sub>)P(E<sub>i</sub>)/ΣP(A|E<sub>j</sub>)P(E<sub>j</sub>). Bayes' classic template: "a positive test result — probability the person is actually ill" always includes the base rate; forgetting P(E<sub>i</sub>) is the standard trap. For matrices-adjacent algebra, Cramer's rule and rank arguments solve linear-system questions: unique solution ⟺ det ≠ 0, infinite/no solution analysis via consistency of augmented matrix.</p>
+</div></article>
+<article class="chapter" id="ch-9"><h3>9. Calculus</h3><div class="chapter-body">
+<h4>Limits, continuity, differentiability</h4>
+<p>The bedrock: lim<sub>x→a</sub> f(x) exists only if LHL = RHL. Standard results — lim (sin x)/x = 1, lim (e<sup>x</sup>−1)/x = 1, lim (ln(1+x))/x = 1, lim (x<sup>n</sup>−a<sup>n</sup>)/(x−a) = n·a<sup>n−1</sup>, lim (1+1/x)<sup>x</sup> = e — solve most rational limits. L'Hôpital applies to 0/0 or ∞/∞ forms only, after confirming the form; the trap is applying it to ∞−∞ or 0·∞ without first converting. Always simplify rationally first (rationalize, divide by the highest power) — half of "L'Hôpital failures" are limits that were elementary. Continuity at a point needs f(a) defined, limit existing, and equality; differentiability needs the difference quotient to have a two-sided limit. Hierarchy: differentiable ⟹ continuous, never the reverse. Check piecewise definitions at the junction points only; the formulas on each interval are trivially smooth.</p>
+<h4>Differentiation and applications</h4>
+<p>Master the chain rule with nested functions (y = sin(x²), y = e<sup>f(x)</sup>), implicit differentiation (differentiate each term, collect dy/dx), and logarithmic differentiation for [f(x)]<sup>g(x)</sup> and products with many factors: ln y = g·ln f, then y′/y = g′ln f + g·f′/f. The trap: ln y needs y &gt; 0; for y &lt; 0 write ln|y|. Parametric curves: dy/dx = (dy/dt)/(dx/dt); second derivative d²y/dx² = d/dx(dy/dx) = [d/dt(dy/dx)]/(dx/dt) — forgetting the division by dx/dt in the second derivative is a classic error. Rolle's theorem needs continuity on [a,b], differentiability on (a,b), and f(a) = f(b); Lagrange's MVT drops the last condition. Applications: rate problems via related rates (dV/dt = 4πr²·dr/dt for a sphere), tangents (slope = f′(a), normal slope = −1/f′), and monotonicity: f increasing where f′ &gt; 0; f′ ≥ 0 with isolated zeros is still strictly increasing — that nuance decides many multiple-choice questions.</p>
+<h4>Maxima–minima</h4>
+<p>First-derivative test locates; second-derivative test confirms (f″ &gt; 0 local min, f″ &lt; 0 local max, f″ = 0 inconclusive — do not declare "no extremum"). Global extrema on a closed interval: evaluate f at all critical points AND both endpoints. Word problems (maximize volume of a box from a sheet, minimize surface area): the constraint substitution is where the problem is won or lost — write the constraint first, reduce to a single variable, then differentiate. Symmetric-structure trick: for sums with fixed total, the extremum usually occurs at symmetry (x = y); verify with the second derivative rather than assuming. AM–GM often replaces calculus entirely for "maximum of xy given x + y = constant" — check which route is faster before committing.</p>
+<h4>Integration and definite integrals</h4>
+<p>Core substitutions: √(a²−x²) → x = a·sin θ, √(a²+x²) → x = a·tan θ, √(x²−a²) → x = a·sec θ; for e<sup>x</sup>-heavy integrands try t = e<sup>x</sup>; for rational functions in sin/cos use the Weierstrass t = tan(x/2). Integration by parts formula ∫u·dv = uv − ∫v·du with ILATE priority (Inverse, Log, Algebraic, Trig, Exponential) for choosing u. Partial fractions for proper rational functions; complete the square for quadratics in the denominator (∫dx/(x²+a²) = (1/a)tan⁻¹(x/a)). Definite-integral workhorses: ∫<sub>0</sub><sup>a</sup> f(x)dx = ∫<sub>0</sub><sup>a</sup> f(a−x)dx (King property — the single most used trick in JEE definite integrals), ∫<sub>−a</sub><sup>a</sup> odd = 0 / even = 2∫<sub>0</sub><sup>a</sup>, and ∫<sub>0</sub><sup>2a</sup> f(x)dx = 2∫<sub>0</sub><sup>a</sup> if f(2a−x) = f(x). Leibniz rule for integrals with variable limits: d/dx ∫<sub>g</sub><sup>h</sup> f(t)dt = f(h)·h′ − f(g)·g′. Area problems: ∫y dx between curves from intersection to intersection; always find the intersection points first and sketch mentally which curve is on top — integrating the wrong difference is the #1 area error. Walli's formula ∫<sub>0</sub><sup>π/2</sup> sin<sup>n</sup>x dx follows the reduction pattern and is worth memorizing for n up to 6.</p>
+<h4>Differential equations</h4>
+<p>Order = highest derivative, degree = its power (after clearing radicals/fractions). Variable separable: dy/dx = f(x)g(y) → dy/g(y) = f(x)dx. Homogeneous equations: substitute y = vx for dy/dx = f(y/x) homogeneous of degree 0. Linear first-order: dy/dx + P(x)y = Q(x), integrating factor IF = e<sup>∫P dx</sup>, solution y·IF = ∫Q·IF dx + c. The order of solving matters: identify the type first (separable → homogeneous → linear → exact). Trap: dy/dx + P(y)x = Q(y) is linear in x as a function of y — solve for x(y) instead. General solution of order n carries n arbitrary constants; a particular solution with fewer constants is incomplete.</p>
+</div></article>
+<article class="chapter" id="ch-10"><h3>10. Coordinate Geometry</h3><div class="chapter-body">
+<h4>Straight lines</h4>
+<p>Forms to know cold: slope–intercept y = mx + c; two-point (y−y₁) = [(y₂−y₁)/(x₂−x₁)](x−x₁); intercept x/a + y/b = 1; normal x·cos α + y·sin α = p. Slope m = tan θ; parallel lines share m, perpendicular lines satisfy m₁·m₂ = −1 (with the vertical/horizontal special cases — x = k is perpendicular to y = k, slopes undefined/zero). Angle between lines tan φ = |(m₁−m₂)/(1+m₁m₂)|; the denominator-zero case means perpendicular. Distance from (x₁,y₁) to ax + by + c = 0 is |ax₁+by₁+c|/√(a²+b²); distance between parallel lines |c₁−c₂|/√(a²+b²). Family of lines through the intersection of L₁, L₂: L₁ + k·L₂ = 0 — eliminates solving the system. Image/reflection of point (x₁,y₁) in line ax+by+c = 0: (x−x₁)/a = (y−y₁)/b = −2(ax₁+by₁+c)/(a²+b²). Centroid, incenter, orthocenter, circumcenter formulas: centroid = average of vertices; incenter = (ax₁+bx₂+cx₃)/(a+b+c) weighted by side lengths; orthocenter of a right triangle is the right-angle vertex. Trap: section formula signs — internal division (mx₂+nx₁)/(m+n), external division (mx₂−nx₁)/(m−n).</p>
+<h4>Circle</h4>
+<p>General form x² + y² + 2gx + 2fy + c = 0, centre (−g,−f), radius √(g²+f²−c); real circle needs g²+f² &gt; c. Parametric: (h + r·cos θ, k + r·sin θ). Chord with midpoint (x₁,y₁): T = S₁ where T = xx₁+yy₁+g(x+x₁)+f(y+y₁)+c and S₁ = value of S at the point. Pair of tangents from (x₁,y₁): T² = S·S₁ (i.e. SS₁ = T²). Length of tangent = √S₁. Chord of contact from external point: T = 0. Director circle (locus of points from which tangents to the circle are perpendicular): x²+y² = 2r² for concentric circle x²+y² = r². Condition for line lx + my + n = 0 to be tangent to x²+y² = r²: n² = r²(l²+m²) — derive by equating perpendicular distance from centre to radius. Orthogonal circles: 2g₁g₂ + 2f₁f₂ = c₁ + c₂. Radical axis of two circles: S₁ − S₂ = 0 (a straight line, valid whenever both are real circles). Common traps: using the tangent formula T = 0 when the point lies ON the circle — that's correct and gives the tangent at that point; but the chord-of-contact formula also returns T = 0 for a point on the circle, and both coincide there. Also: a line through a point inside the circle (S₁ &lt; 0) can never be a tangent — if your "tangent" computation works from an interior point, recheck the point's position.</p>
+<h4>Parabola, ellipse, hyperbola</h4>
+<p>Parabola y² = 4ax: focus (a,0), directrix x = −a, latus rectum 4a, parametric (at², 2at). Tangent at (x₁,y₁): T = 0 with T = yy₁ − 2a(x+x₁); chord with midpoint (x₁,y₁): T = S₁. Standard tangent in slope form: y = mx + a/m touches y² = 4ax — the condition c = a/m for y = mx + c is a favourite. Focal chord through (at₁²,2at₁): t₁·t₂ = −1. Ellipse x²/a² + y²/b² = 1 (a &gt; b): eccentricity e = √(1−b²/a²), foci (±ae,0), directrices x = ±a/e, latus rectum 2b²/a. Auxiliary circle x²+y² = a²; eccentric angle parametrization (a·cos θ, b·sin θ). Director circle of ellipse: x² + y² = a² + b². Hyperbola x²/a² − y²/b² = 1: e = √(1+b²/a²), asymptotes y = ±(b/a)x; rectangular hyperbola xy = c² is the special case a = b with asymptotes as axes. Condition for line y = mx + c to touch ellipse: c² = a²m² + b²; for hyperbola: c² = a²m² − b² — one sign change, many marks. Chord of contact, pair of tangents, chord with midpoint: identical T/S/S₁ machinery across all conics, only the expressions differ. Trap: the "tangent at point" formula T = 0 requires the point to be ON the conic; for external points it yields the chord of contact — students routinely label it "tangent".</p>
+<h4>Problem templates</h4>
+<p>Locus problems: let the moving point be (h,k), write the given condition, eliminate parameters, replace (h,k) → (x,y). Shortest-distance between two conics: distance along the common normal — set up parallel-normal conditions. Reflection/optical properties: parabola reflects axial rays to focus; ellipse reflects one focus to the other — Advanced problems encode these geometrically, so recognize the property instead of computing. Translation/rotation of axes: when a conic equation has an xy term, rotate by tan 2θ = 2h/(a−b) to kill it; when linear terms exist, translate to the centre first. Always check "does the point lie inside/on/outside" (S₁ sign) before choosing tangent vs chord formulas.</p>
+</div></article>
+<article class="chapter" id="ch-11"><h3>11. Vectors, 3D Geometry &amp; Matrices</h3><div class="chapter-body">
+<h4>Vectors</h4>
+<p>Dot product a·b = |a||b|cos θ gives projection: projection of a on b = (a·b)/|b|. Cross product |a×b| = |a||b|sin θ is the area of the parallelogram; direction via right-hand rule. Scalar triple product [a b c] = a·(b×c) is the volume of the parallelepiped; [a b c] = 0 ⟺ coplanar. Vector triple product: a×(b×c) = (a·c)b − (a·b)c ("BAC minus CAB"). Lagrange identity: |a×b|² = |a|²|b|² − (a·b)² — proves Cauchy–Schwarz instantly. Collinearity test: b = λa; coplanarity of three vectors through their scalar triple product being zero. Centroid position vector = (a+b+c)/3; section formula r = (mb + na)/(m+n) internal, (mb − na)/(m−n) external. Common traps: a·b = 0 does not imply a = 0 or b = 0 (orthogonality); vector division is undefined — never "cancel" a vector from both sides of a dot product; a×b = 0 means parallel OR one vector is zero.</p>
+<h4>3D geometry</h4>
+<p>Direction cosines l² + m² + n² = 1; direction ratios are any proportional triple. Angle between lines with direction ratios (a₁,b₁,c₁), (a₂,b₂,c₂): cos θ = |a₁a₂+b₁b₂+c₁c₂|/(√(Σa₁²)·√(Σa₂²)). Line: symmetric form (x−x₁)/a = (y−y₁)/b = (z−z₁)/c; vector form r = a + λb. Plane: intercept x/a+y/b+z/c = 1; normal form lx+my+nz = p; through point (x₁,y₁,z₁) with normal (a,b,c): a(x−x₁)+b(y−y₁)+c(z−z₁) = 0. Plane through three points: determinant |x−x₁ y−y₁ z−z₁; x₂−x₁ y₂−y₁ z₂−z₁; x₃−x₁ y₃−y₁ z₃−z₁| = 0. Shortest distance between skew lines r = a₁+λb₁ and r = a₂+μb₂: d = |(a₂−a₁)·(b₁×b₂)|/|b₁×b₂| — derived by projecting the joining vector onto the common perpendicular. Intersection tests: line meets plane ax₁+by₁+cz₁+d = 0 at the parameter value from a(x₁+la)+…+d = 0; parallel ⟺ al+bm+cn = 0. Angle between line and plane = 90° − (angle between line and plane normal). Distance from point to plane: |ax₁+by₁+cz₁+d|/√(a²+b²+c²). Trap: direction cosines must satisfy the unit identity — if a question gives "direction cosines" that don't square-sum to 1, they are direction ratios in disguise; normalize first. Also, two lines are skew iff they are neither parallel nor intersecting — check the shortest-distance formula denominator: zero means the lines are parallel.</p>
+<h4>Matrices and determinants</h4>
+<p>Determinant properties: row/col swap flips sign; adding a multiple of one row to another leaves it unchanged (the workhorse for simplification); det(kA) = k<sup>n</sup>·det(A) for n×n — the forgotten power of n is a perennial trap. det(AB) = det(A)·det(B). Adjoint: A·adj(A) = det(A)·I, so A⁻¹ = adj(A)/det(A) when det ≠ 0. Cofactor expansion: pick the row/column with the most zeros. System Ax = b: unique solution ⟺ det(A) ≠ 0 (x = A⁻¹b); det = 0 with consistent equations ⟹ infinitely many solutions; inconsistent ⟹ none. Rank: for homogeneous systems, non-trivial solutions exist ⟺ det = 0. Special matrices: symmetric (Aᵀ = A), skew-symmetric (Aᵀ = −A, diagonal zeros, odd-order determinant = 0), orthogonal (AᵀA = I, det = ±1), idempotent (A² = A), involutory (A² = I). Eigenvalue relations: Σλ = trace, Πλ = det. Standard determinant template: cyclic or "each row sums to the same value" determinants — take C₁ → C₁+C₂+C₃, factor the common sum, then reduce. Characteristic equation det(A−λI) = 0; Cayley–Hamilton lets you compute Aⁿ and A⁻¹ from the characteristic polynomial — a fast Advanced shortcut for 2×2 and 3×3 matrices.</p>
+<h4>Worked templates</h4>
+<p>Skew lines example: L₁ through (1,0,0) direction (1,1,0), L₂ through (0,1,1) direction (0,1,1). Then a₂−a₁ = (−1,1,1), b₁×b₂ = (1,−1,1), |(a₂−a₁)·(b₁×b₂)| = |−1−1+1| = 1, |b₁×b₂| = √3, so d = 1/√3. Notice how the whole computation is vector algebra — no geometry diagram needed. Inverse example: for A = [[2,1],[1,1]], det = 1, adj = [[1,−1],[−1,2]], so A⁻¹ = [[1,−1],[−1,2]]; check A·A⁻¹ = I. In exams, verify your inverse by multiplying — 10 seconds, saves the question. Eigenvalues of a 2×2: λ satisfies λ² − (trace)λ + det = 0; so for [[3,1],[2,2]], λ² − 5λ + 4 = 0 gives λ = 1, 4, and indeed 1+4 = 5 = trace, 1·4 = 4 = det. Rank-nullity for homogeneous systems: a 3×3 homogeneous system has a non-trivial solution iff det = 0; if det ≠ 0 the only solution is x = y = z = 0 — a common one-liner.</p>
+</div></article>
+
+<article class="chapter" id="ch-12"><h3>12. Trigonometry &amp; Complex Numbers</h3><div class="chapter-body">
+<h4>Trigonometric identities and equations</h4>
+<p>Compound-angle formulas: sin(A±B), cos(A±B), tan(A±B) = (tan A ± tan B)/(1 ∓ tan A tan B). Double-angle: sin 2A = 2 sin A cos A, cos 2A = 2cos²A − 1 = 1 − 2sin²A = cos²A − sin²A, tan 2A = 2tan A/(1−tan²A). Triple-angle: sin 3A = 3sin A − 4sin³A, cos 3A = 4cos³A − 3cos A. Sum-to-product: sin C + sin D = 2 sin[(C+D)/2] cos[(C−D)/2], cos C − cos D = −2 sin[(C+D)/2] sin[(C−D)/2] (note the minus sign). Conditional identities: if A+B+C = π then tan A + tan B + tan C = tan A tan B tan C and sin 2A + sin 2B + sin 2C = 4 sin A sin B sin C. General solution templates: sin θ = sin α ⟹ θ = nπ + (−1)<sup>n</sup>α; cos θ = cos α ⟹ θ = 2nπ ± α; tan θ = tan α ⟹ θ = nπ + α. Trap: equations like sin x = sin 2x yield extra families — always write all families via the general solution, never divide by a trig function (dividing by sin x loses the sin x = 0 family). Domain restrictions from the original equation (e.g. tan undefined at π/2) must be re-applied at the end.</p>
+<h4>Inverse trigonometric functions</h4>
+<p>Principal value ranges: sin⁻¹, tan⁻¹, cosec⁻¹ ∈ [−π/2, π/2]; cos⁻¹, sec⁻¹, cot⁻¹ ∈ [0, π]. Conversion identities: sin⁻¹x + cos⁻¹x = π/2 for x ∈ [−1,1]; tan⁻¹x + tan⁻¹y = tan⁻¹[(x+y)/(1−xy)] with correction +π if xy &gt; 1 and x,y &gt; 0, −π if xy &gt; 1 and x,y &lt; 0. The correction term is the standard trap — the uncorrected formula gives the wrong branch. Double-angle conversions: 2tan⁻¹x = tan⁻¹[2x/(1−x²)] (|x| &lt; 1), = sin⁻¹[2x/(1+x²)] = cos⁻¹[(1−x²)/(1+x²)]. Strategy for "prove/ simplify" questions: substitute x = tan θ or x = sin θ to collapse the expression into a single inverse function, minding the θ-range so the principal value survives.</p>
+<h4>Complex numbers</h4>
+<p>Modulus–argument form z = r(cos θ + i sin θ), r = |z| = √(x²+y²), arg z = tan⁻¹(y/x) with quadrant correction. De Moivre: (cos θ + i sin θ)<sup>n</sup> = cos nθ + i sin nθ — the engine for trig expansions and roots. n-th roots of unity: ω<sub>k</sub> = e<sup>2πik/n</sup>, forming a regular n-gon on the unit circle; sum of all n-th roots = 0. Cube roots of unity: 1, ω, ω² with 1 + ω + ω² = 0, ω³ = 1, ω̄ = ω². Geometric interpretation: |z − z₀| = r is a circle; |z−z₁| = |z−z₂| is the perpendicular bisector; arg[(z−z₁)/(z−z₂)] = α describes an arc of a circle (the locus of points subtending angle α). Rotation: multiplying by e<sup>iθ</sup> rotates by θ about the origin; (z₃−z₁)/(z₂−z₁) has modulus = length ratio and argument = angle between the segments — this single expression solves most "prove the triangle is equilateral/right-angled" problems. Inequalities: |z₁+z₂| ≤ |z₁|+|z₂| (triangle), ||z₁|−|z₂|| ≤ |z₁−z₂|. Max/min of |z| subject to a locus: geometric distance from origin to the locus curve beats algebra — e.g. max |z| with |z−4| = 2 is 6, read off the picture. Common traps: arg(z₁z₂) = arg z₁ + arg z₂ only modulo 2π — sums must be pulled back into (−π, π]; √(−a) with a &gt; 0 is i√a, but √(ab) = √a·√b fails when both are negative; log of a complex number is multi-valued, so ln(z₁z₂) = ln z₁ + ln z₂ needs care.</p>
+<h4>Worked mini-templates</h4>
+<p>Roots of unity example: solve z⁵ = 1 and show one non-trivial root satisfies 1+z+z²+z³+z⁴ = 0 — the sum of ALL five roots is the coefficient trick (x⁵−1 = 0 has no x⁴ term, so Σ roots = 0, and removing z = 1 leaves the quartic sum zero). Equilateral-triangle test: points z₁,z₂,z₃ form an equilateral triangle iff z₁²+z₂²+z₃² = z₁z₂+z₂z₃+z₃z₁; proof via rotating side z₂−z₁ by ±60°: (z₃−z₁)/(z₂−z₁) = e<sup>±iπ/3</sup> = cos 60° ± i sin 60°. Inverse-trig worked example: prove tan⁻¹(1/2) + tan⁻¹(1/3) = π/4. Uncorrected formula gives tan⁻¹[(1/2+1/3)/(1−1/6)] = tan⁻¹(1) = π/4; here xy = 1/6 &lt; 1 so no branch correction is needed, but if the fractions were 2 and 3 instead, xy = 6 &gt; 1 would push the sum past π/2 and the correction would apply. Trig-equation drill: solve sin 3x = sin x. General solution: 3x = nπ + (−1)<sup>n</sup>x. For even n = 2k: 3x = 2kπ + x ⟹ x = kπ. For odd n = 2k+1: 3x = (2k+1)π − x ⟹ x = (2k+1)π/4. Two families, both kept — factoring 2 sin x cos 2x = 0 gives the same result faster, but only because no division was involved.</p>
+</div></article>
+<article class="chapter" id="ch-13"><h3>13. Chapter-wise rapid formula sheets</h3><div class="chapter-body">
+<p>One-line-per-result revision cards. Read a card, cover the right side, reproduce from memory.</p>
+<h4>Algebra</h4>
+<ul><li>Quadratic: α+β = −b/a, αβ = c/a; D = b²−4ac; f(k₁)f(k₂) &lt; 0 ⟺ one root in (k₁,k₂).</li><li>AP: T<sub>n</sub> = a+(n−1)d, S<sub>n</sub> = n/2(2a+(n−1)d). GP: S<sub>n</sub> = a(r<sup>n</sup>−1)/(r−1), S<sub>∞</sub> = a/(1−r), |r|&lt;1. Σn² = n(n+1)(2n+1)/6, Σn³ = [n(n+1)/2]².</li><li>AM ≥ GM ≥ HM; x + 1/x ≥ 2 (x&gt;0), ≤ −2 (x&lt;0).</li><li>Binomial: T<sub>r+1</sub> = C(n,r)x<sup>n−r</sup>a<sup>r</sup>; ΣC(n,r)=2<sup>n</sup>; Σr·C(n,r)=n·2<sup>n−1</sup>; Σr²C(n,r)=n(n+1)2<sup>n−2</sup>.</li><li>e.g. derangements D<sub>n</sub> = n!Σ(−1)<sup>k</sup>/k!; Bayes: P(E<sub>i</sub>|A) = P(A|E<sub>i</sub>)P(E<sub>i</sub>)/ΣP(A|E<sub>j</sub>)P(E<sub>j</sub>).</li><li>det(kA) = k<sup>n</sup>det A; A⁻¹ = adj(A)/det A; A·adj A = det A·I; odd-order skew-symmetric det = 0.</li></ul>
+<h4>Calculus</h4>
+<ul><li>lim (sin x)/x = 1; lim (e<sup>x</sup>−1)/x = 1; lim (1+1/x)<sup>x</sup> = e; lim (x<sup>n</sup>−a<sup>n</sup>)/(x−a) = na<sup>n−1</sup>.</li><li>d/dx[x<sup>n</sup>] = nx<sup>n−1</sup>; d/dx[ln x] = 1/x; d/dx[a<sup>x</sup>] = a<sup>x</sup> ln a; d/dx[tan⁻¹x] = 1/(1+x²).</li><li>[f(x)]<sup>g(x)</sup>: ln y = g·ln f, y′/y = g′ ln f + g f′/f.</li><li>Parametric: dy/dx = (dy/dt)/(dx/dt); d²y/dx² = [d/dt(dy/dx)]/(dx/dt).</li><li>∫dx/(x²+a²) = (1/a)tan⁻¹(x/a); ∫dx/√(a²−x²) = sin⁻¹(x/a); ∫e<sup>x</sup>[f+f′]dx = e<sup>x</sup>f + c.</li><li>King property: ∫<sub>0</sub><sup>a</sup> f(x)dx = ∫<sub>0</sub><sup>a</sup> f(a−x)dx; even/odd rules on symmetric limits.</li><li>Linear DE: dy/dx + Py = Q; IF = e<sup>∫Pdx</sup>; y·IF = ∫Q·IF dx + c.</li></ul>
+<h4>Coordinate geometry</h4>
+<ul><li>Dist point–line: |ax₁+by₁+c|/√(a²+b²). Family through L₁∩L₂: L₁+kL₂ = 0.</li><li>Circle: centre (−g,−f), r = √(g²+f²−c); tangent length √S₁; T² = SS₁ (pair of tangents); chord midpoint T = S₁; chord of contact T = 0.</li><li>Tangent condition: line y = mx+c touches x²+y² = r² ⟺ c² = r²(1+m²).</li><li>Parabola y² = 4ax: tangent at (x₁,y₁): yy₁ = 2a(x+x₁); slope-form tangent y = mx + a/m; focal chord t₁t₂ = −1.</li><li>Ellipse: c² = a²m²+b² for tangency; director circle x²+y² = a²+b²; latus rectum 2b²/a.</li><li>Hyperbola: tangency c² = a²m²−b²; asymptotes y = ±(b/a)x; rectangular hyperbola xy = c².</li></ul>
+<h4>Vectors, 3D, trig, complex</h4>
+<ul><li>a×(b×c) = (a·c)b − (a·b)c; [a b c] = 0 ⟺ coplanar; |a×b|² = |a|²|b|² − (a·b)².</li><li>Skew-line distance: |(a₂−a₁)·(b₁×b₂)|/|b₁×b₂|; line–plane angle via normal.</li><li>sin 3A = 3sin A − 4sin³A; cos 3A = 4cos³A − 3cos A; A+B+C=π ⟹ tan A+tan B+tan C = tan A tan B tan C.</li><li>General solutions: sin θ = sin α ⟹ θ = nπ+(−1)<sup>n</sup>α; cos ⟹ 2nπ±α; tan ⟹ nπ+α.</li><li>1+ω+ω² = 0, ω³ = 1; de Moivre (cos θ+i sin θ)<sup>n</sup> = cos nθ+i sin nθ; rotation by e<sup>iθ</sup>.</li><li>|z₁+z₂| ≤ |z₁|+|z₂|; max |z| on a locus = farthest geometric distance from origin.</li></ul>
+<h4>Probability &amp; statistics, DE types, standard integrals</h4>
+<ul><li>P(A∪B) = P(A)+P(B)−P(A∩B); P(A|B) = P(A∩B)/P(B); independent ⟺ P(A∩B) = P(A)P(B).</li><li>Binomial distribution: P(X=r) = C(n,r)p<sup>r</sup>q<sup>n−r</sup>; mean np, variance npq.</li><li>DE recognition order: separable → homogeneous (y = vx) → linear (IF) → exact; linear in x as function of y: dx/dy + P(y)x = Q(y).</li><li>∫sin x dx = −cos x; ∫sec²x dx = tan x; ∫sec x tan x dx = sec x; ∫dx/(x√(x²−a²)) = (1/a)sec⁻¹(x/a).</li><li>∫√(a²−x²)dx = (x/2)√(a²−x²) + (a²/2)sin⁻¹(x/a); ∫√(x²+a²)dx = (x/2)√(x²+a²) + (a²/2)ln|x+√(x²+a²)|.</li><li>Maclaurin: e<sup>x</sup> = 1+x+x²/2!+…; sin x = x−x³/3!+x⁵/5!−…; cos x = 1−x²/2!+x⁴/4!−…; ln(1+x) = x−x²/2+x³/3−… (|x|≤1, x≠−1); (1+x)<sup>n</sup> = 1+nx+n(n−1)x²/2+…</li><li>Walli's: ∫<sub>0</sub><sup>π/2</sup> sin<sup>n</sup>x dx = [(n−1)/n]·[(n−3)/(n−2)]·…·(π/2 or 1) — factor π/2 at the end for even n, 1 for odd n.</li><li>Leibniz: d/dx ∫<sub>g(x)</sub><sup>h(x)</sup> f(t)dt = f(h)h′ − f(g)g′.</li></ul>
+</div></article>
+<article class="chapter" id="ch-14"><h3>14. Advanced tactics &amp; common traps</h3><div class="chapter-body">
+<h4>Time tactics for Main vs Advanced</h4>
+<p>JEE Main rewards speed on single-concept numerical questions: fix a per-question budget (~2 minutes), and if a question needs more than 90 seconds of setup, mark and move — the paper is long enough that sunk time kills more marks than hard questions do. JEE Advanced rewards depth: multi-concept integer/numerical questions punish option-guessing, so verify by an independent route (dimensional check, limiting case, symmetry) before committing. In both, do the paper in passes: first pass = everything you can solve in under 2 minutes; second pass = the rest. Never leave an Advanced numerical unattempted if you have any route — there is no negative marking on integer-type answers, while Main's numerical section also carries no negative marking, so a derived guess always beats a blank.</p>
+<h4>Limiting cases and dimensional checks</h4>
+<p>For parameter-laden algebra/calculus answers, test n = 0, n = 1, x → 0, x → ∞: a sum formula that fails at n = 1 is wrong. In coordinate geometry, test the degenerate position (circle shrinking to a point, lines becoming parallel). In physics-adjacent math (vectors, 3D), check dimensions and symmetry: an area answer must scale as length². This habit catches sign errors and missing factors that no amount of re-reading finds.</p>
+<h4>The trap catalogue</h4>
+<ul><li>Dividing by a variable or trig function — you lose the zero family. Always factor instead.</li><li>Forgetting domain restrictions after squaring or applying log: extraneous roots enter through squaring, log(x²), and tan branch corrections.</li><li>det(kA) = k<sup>n</sup>det(A), not k·det(A).</li><li>"Both roots negative" needs D ≥ 0 plus sign conditions — inequalities alone are insufficient.</li><li>T = 0 is the tangent only for a point ON the conic; for external points it is the chord of contact.</li><li>arg(z₁z₂) = arg z₁ + arg z₂ only mod 2π; pull back into (−π, π].</li><li>Second derivative of a parametric curve needs division by dx/dt.</li><li>x + 1/x ≥ 2 only for x &gt; 0; the inequality reverses for negative x.</li><li>Area between curves: find intersections first, integrate the correct (upper − lower) difference.</li><li>L'Hôpital only for 0/0 or ∞/∞ — and try algebraic simplification first.</li><li>Bayes' theorem: never drop the base-rate prior P(E<sub>i</sub>).</li><li>Increasing means f′ ≥ 0 with isolated zeros, not f′ &gt; 0 everywhere.</li><li>Direction "cosines" that don't square-sum to 1 are ratios — normalize.</li><li>Skew vs parallel lines: the shortest-distance formula's denominator is zero for parallel lines.</li></ul>
+<h4>Problem-typing in the first 30 seconds</h4>
+<p>Advanced papers recycle a small set of templates: King-property definite integrals, T/S/S₁ conic questions, Bayes' base-rate traps, linear DE recognition, rotation-via-complex-number geometry, greatest-term binomial, and AM–GM optimization. Training yourself to name the template within 30 seconds converts "hard" problems into "familiar" ones — that recognition, more than any single formula, is what separates qualifiers from toppers. Keep a personal error log of every trap you fall into; revise it, not just formulas, in the final week.</p>
+<h4>Option elimination (Main) and rough-work discipline</h4>
+<p>In JEE Main MCQs, eliminate before solving: plug the options into the equation for "which satisfies" questions; check parity/symmetry to kill two options in trig and definite-integral questions; use x = 0 or x = 1 substitution to test algebraic identities. Dimensional and limiting checks often single out the right option without a full solve — a 20-second option test beats a 3-minute derivation. Rough-work discipline: one question, one boxed region, every step legible; most "silly mistakes" are lost minus signs in cramped margins. Number your rough pages to match the question paper so you can re-audit in the last 15 minutes. For Advanced multi-correct: each option is an independent true/false — partial marking rewards the ones you are sure of, so attempt every option you're confident about even if one option is uncertain; but a single wrong tick wipes the partial credit for that question, so never guess a doubtful option.</p>
+<h4>Final-week checklist</h4>
+<ul><li>Re-derive, don't re-read: close the book and reproduce each chapter-13 card from scratch.</li><li>Redo every question in your error log once; if you repeat an error, add a red-flag note to the log.</li><li>Two full mocks under timed conditions in the last week — analyse time sinks, not just the score.</li><li>Sleep and paper-day logistics beat one more chapter: the exam is won on accuracy under fatigue, not on the last unrevised topic.</li></ul>
+</div></article>
+    </div>
+  </div></section>
+
+  <section id="plan"><div class="wrap"><div class="section-head"><h2><span class="num">04 / 24-WEEK ROUTE</span>A repeatable system</h2><p>Keep all three subjects moving. Every week needs concept work, timed questions and an error review; otherwise familiarity gets mistaken for mastery.</p></div>
     <div class="plan-grid"><article class="phase"><span class="mono">WEEKS 1–8</span><h3>Foundation</h3><ol><li>Learn one concept block.</li><li>Do 20–30 basic-to-Main problems.</li><li>Write a five-line recall sheet.</li><li>Retest errors after 48 hours.</li></ol></article><article class="phase"><span class="mono">WEEKS 9–16</span><h3>Integration</h3><ol><li>Mix two chapters per session.</li><li>Add numerical and multi-correct sets.</li><li>Run one 90-minute subject test weekly.</li><li>Tag errors: concept, algebra, reading, time.</li></ol></article><article class="phase"><span class="mono">WEEKS 17–24</span><h3>Exam mode</h3><ol><li>Alternate Main and Advanced papers.</li><li>Simulate exact breaks and timings.</li><li>Revise from error log, not from scratch.</li><li>Stop low-value resource switching.</li></ol></article></div>
     <div class="day" aria-label="Sample study day"><div class="time">SAMPLE DAY</div><div><b>Block A · 90 min</b><br>New concept + worked examples</div><div><b>Block B · 75 min</b><br>Timed problem set</div><div><b>Block C · 45 min</b><br>Error log + spaced recall</div></div>
   </div></section>
 
-  <section id="practice"><div class="wrap"><div class="section-head"><h2><span class="num">04 / DIAGNOSTIC</span>Six questions. No notes.</h2><p>Choose once; explanations appear immediately. The point is not the score—it is identifying whether your next hour belongs to concepts, algebra or careful reading.</p></div>
+  <section id="practice"><div class="wrap"><div class="section-head"><h2><span class="num">05 / DIAGNOSTIC</span>Six questions. No notes.</h2><p>Choose once; explanations appear immediately. The point is not the score—it is identifying whether your next hour belongs to concepts, algebra or careful reading.</p></div>
     <div class="drill-grid"><div id="questions">
       <article class="question" data-answer="2"><h3>1. A particle starts from rest with constant acceleration 4 m/s². Its speed after travelling 18 m is:</h3><div class="options"><button class="option">8 m/s</button><button class="option">10 m/s</button><button class="option">12 m/s</button><button class="option">16 m/s</button></div><p class="explain"><b>12 m/s.</b> Use v²=u²+2as = 0+2×4×18 = 144.</p></article>
       <article class="question" data-answer="1"><h3>2. For a first-order reaction, doubling the initial concentration changes the half-life by:</h3><div class="options"><button class="option">A factor of 2</button><button class="option">No change</button><button class="option">A factor of ½</button><button class="option">A factor of 4</button></div><p class="explain"><b>No change.</b> For first order, t½=0.693/k, independent of initial concentration.</p></article>
@@ -111,7 +351,19 @@
     </div><aside class="scorebox"><span class="mono">LIVE SCORE</span><b><span id="score">0</span>/6</b><div class="scorebar"><i id="scorebar"></i></div><p id="feedback">Answer all six. A wrong answer is useful if you can name the reason.</p><button type="button" class="btn" id="resetQuiz">Reset diagnostic</button></aside></div>
   </div></section>
 
-  <section id="resources"><div class="wrap"><div class="section-head"><h2><span class="num">05 / VERIFIED PATHS</span>Use external help deliberately</h2><p>The notes above are the desk. These links are for official rule checks, deeper video instruction, daily questions and updates—not for endlessly collecting material.</p></div>
+  <section id="practice-bank"><div class="wrap"><div class="section-head"><h2><span class="num">06 / PRACTICE BANK</span>598 questions. Instant feedback.</h2><p>Pick a subject and a set size, then solve. Answers and explanations appear the moment you choose. These questions were written for this page — they are <b>not</b> JEE past papers. Official past papers are linked under <a href="#best-free-resources">Best free resources</a>.</p></div>
+    <div class="pb-controls">
+      <label>Subject <select id="pbSubject" aria-label="Practice subject"><option value="all">All subjects (598)</option><option value="Physics">Physics (200)</option><option value="Chemistry">Chemistry (199)</option><option value="Maths">Mathematics (199)</option></select></label>
+      <label>Set size <select id="pbCount" aria-label="Questions per set"><option value="10">10</option><option value="20" selected>20</option><option value="50">50</option></select></label>
+      <button class="btn" id="pbStart" type="button">Start practice set</button>
+      <button class="btn alt" id="pbShuffle" type="button">New shuffle</button>
+    </div>
+    <div class="pb-status"><span id="pbScore">0</span> correct · <span id="pbAnswered">0</span> answered this session</div>
+    <div id="pbQuestions"><p class="session-note">Press “Start practice set” to begin. Choose once per question — explanations appear immediately.</p></div>
+    <p class="session-note">Session-only progress: scores reset when you refresh or leave this page — nothing is stored between visits.</p>
+  </div></section>
+
+  <section id="resources"><div class="wrap"><div class="section-head"><h2><span class="num">07 / VERIFIED PATHS</span>Use external help deliberately</h2><p>The notes above are the desk. These links are for official rule checks, deeper video instruction, daily questions and updates—not for endlessly collecting material.</p></div>
     <div class="resources">
       <a class="resource" href="https://images.shiksha.com/mediadata/examGuides/examSectionGuide1545_Pattern_2026-07-09-03-19.pdf" target="_blank" rel="noopener"><span class="label">Exam reference</span><h3>JEE Main 2026 pattern digest</h3><p>Question distribution, duration and marking reference.</p><span class="arrow">Open PDF ↗</span></a>
       <a class="resource" href="https://media.collegedekho.com/media/uploads/2025/12/15/jee-advanced-2026-syllabus.pdf" target="_blank" rel="noopener"><span class="label">Syllabus</span><h3>JEE Advanced 2026 syllabus</h3><p>Detailed Physics, Chemistry and Mathematics scope.</p><span class="arrow">Open PDF ↗</span></a>
@@ -143,6 +395,150 @@
 })();
 </script>
 
+</section>
+
+  <section id="best-free-resources"><div class="wrap">
+  <h2><span class="num">08 / BEST FREE RESOURCES</span>Best free resources</h2>
+  <p class="section-sub">Hand-picked, fully free standouts for JEE Main + Advanced — no paywall needed to use what is listed.</p>
+  <div class="resource-grid">
+
+    <div class="resource-card">
+      <span class="badge badge-free">FREE</span>
+      <h3><a href="https://sathee.iitk.ac.in" target="_blank" rel="noopener">SATHEE (IIT Kanpur + Ministry of Education)</a></h3>
+      <p class="rtype">Website + App</p>
+      <p>The government's free coaching: video lectures by IIT professors (including HC Verma), chapter-wise PYQs, All-India mock tests and free mentorship — 21 lakh+ learners registered.</p>
+    </div>
+
+    <div class="resource-card">
+      <span class="badge badge-free">FREE</span>
+      <h3><a href="https://play.google.com/store/search?q=NTA+Abhyas&c=apps" target="_blank" rel="noopener">NTA Abhyas App</a></h3>
+      <p class="rtype">App</p>
+      <p>The official NTA mock-test app: daily full-length CBT papers that match the real JEE Main pattern, with solutions and performance analysis.</p>
+    </div>
+
+    <div class="resource-card">
+      <span class="badge badge-free">FREE</span>
+      <h3><a href="https://www.examside.com" target="_blank" rel="noopener">ExamSIDE</a></h3>
+      <p class="rtype">Website</p>
+      <p>The cleanest chapter-wise PYQ platform: filter by subject, chapter and year across JEE Main (2002+) and Advanced (2007+). Perfect for drilling a chapter right after theory.</p>
+    </div>
+
+    <div class="resource-card">
+      <span class="badge badge-free">FREE</span>
+      <h3><a href="https://www.mathongo.com" target="_blank" rel="noopener">MathonGo</a></h3>
+      <p class="rtype">Website + App</p>
+      <p>Chapter-wise JEE Main PYQs with quality solutions, plus data on how often each chapter actually appears — study what the paper rewards.</p>
+    </div>
+
+    <div class="resource-card">
+      <span class="badge badge-free">FREE</span>
+      <h3><a href="https://jeeadv.ac.in" target="_blank" rel="noopener">JEE Advanced Official Archive</a></h3>
+      <p class="rtype">Website</p>
+      <p>The organising IIT's own archive of Advanced papers (2007 onwards) with official answer keys — the single most authoritative PYQ source.</p>
+    </div>
+
+    <div class="resource-card">
+      <span class="badge badge-free">FREE</span>
+      <h3><a href="https://www.youtube.com/@MohitTyagi" target="_blank" rel="noopener">Mohit Tyagi (Competishun)</a></h3>
+      <p class="rtype">YouTube</p>
+      <p>IIT-Delhi's "God of Calculus" with a full free PCM syllabus (2.2M subscribers) taught at genuine Advanced depth — physics, chemistry and maths, nothing locked.</p>
+    </div>
+
+    <div class="resource-card">
+      <span class="badge badge-free">FREE</span>
+      <h3><a href="https://physicsgalaxy.com" target="_blank" rel="noopener">Physics Galaxy — Ashish Arora</a></h3>
+      <p class="rtype">Website + YouTube</p>
+      <p>9,000+ free to-the-point physics lectures from a mentor of multiple AIR-1s — one of the world's largest free physics libraries for JEE.</p>
+    </div>
+
+    <div class="resource-card">
+      <span class="badge badge-free">FREE</span>
+      <h3><a href="https://www.youtube.com/@nehamamsarmy" target="_blank" rel="noopener">Neha Agrawal — Mathematically Inclined</a></h3>
+      <p class="rtype">YouTube</p>
+      <p>1.7M-subscriber maths channel: complete theory, video solutions to hundreds of PYQs, and free 2026/27 planners with handwritten notes.</p>
+    </div>
+
+    <div class="resource-card">
+      <span class="badge badge-free">FREE</span>
+      <h3><a href="https://www.youtube.com/results?search_query=Eduniti+Mohit+Goenka" target="_blank" rel="noopener">Eduniti — Mohit Goenka (IIT KGP)</a></h3>
+      <p class="rtype">YouTube</p>
+      <p>Advanced-level physics problem series, chapter-wise PYQ playlists and full-syllabus formula marathons — ideal for the last-mile revision push.</p>
+    </div>
+
+    <div class="resource-card">
+      <span class="badge badge-free">FREE</span>
+      <h3><a href="https://nptel.ac.in" target="_blank" rel="noopener">NPTEL</a></h3>
+      <p class="rtype">Website</p>
+      <p>IIT professors' full lecture courses, free forever — the deepest free theory available when a chapter's standard material feels thin.</p>
+    </div>
+
+    <div class="resource-card">
+      <span class="badge badge-free">FREE</span>
+      <h3><a href="https://www.khanacademy.org" target="_blank" rel="noopener">Khan Academy</a></h3>
+      <p class="rtype">Website + App</p>
+      <p>Free foundation courses in physics, chemistry and maths with exercises — the fastest way to fix shaky basics before touching Advanced problems.</p>
+    </div>
+
+    <div class="resource-card">
+      <span class="badge badge-free">FREE</span>
+      <h3><a href="https://ocw.mit.edu" target="_blank" rel="noopener">MIT OpenCourseWare</a></h3>
+      <p class="rtype">Website + YouTube</p>
+      <p>Real MIT courses (8.01 physics, 18.01 calculus) free online — builds the first-principles thinking JEE Advanced rewards.</p>
+    </div>
+
+    <div class="resource-card">
+      <span class="badge badge-free">FREE</span>
+      <h3><a href="https://ncert.nic.in" target="_blank" rel="noopener">NCERT Official Textbooks</a></h3>
+      <p class="rtype">Website</p>
+      <p>Free PDFs of Class 11–12 NCERT books — the base of the JEE Main syllabus and the bible for inorganic chemistry.</p>
+    </div>
+
+    <div class="resource-card">
+      <span class="badge badge-free">FREE</span>
+      <h3><a href="https://melvano.com" target="_blank" rel="noopener">Melvano</a></h3>
+      <p class="rtype">Website + App</p>
+      <p>Free AI-driven practice built by IIT alumni: finds your weak chapters, serves 45 years of PYQs, and predicts your All-India rank.</p>
+    </div>
+
+    <div class="resource-card">
+      <span class="badge badge-free">FREE</span>
+      <h3><a href="https://www.doubtnut.com" target="_blank" rel="noopener">Doubtnut</a></h3>
+      <p class="rtype">Website + App</p>
+      <p>Snap a photo of any problem and get an instant video solution — 50M+ downloads, free doubt-solving for all of PCM.</p>
+    </div>
+
+    <div class="resource-card">
+      <span class="badge badge-free">FREE</span>
+      <h3><a href="https://www.learnohub.com" target="_blank" rel="noopener">LearnoHub (ExamFear)</a></h3>
+      <p class="rtype">Website + App</p>
+      <p>Free, well-explained video lessons for Classes 6–12 physics, chemistry and maths — a solid no-cost classroom alternative.</p>
+    </div>
+
+    <div class="resource-card">
+      <span class="badge badge-free">FREE</span>
+      <h3><a href="https://www.desmos.com" target="_blank" rel="noopener">Desmos</a></h3>
+      <p class="rtype">Website</p>
+      <p>Free graphing calculator — see functions, conics and calculus come alive instead of memorising their shapes.</p>
+    </div>
+
+    <div class="resource-card">
+      <span class="badge badge-free">FREE</span>
+      <h3><a href="https://maurya-ayush02.github.io" target="_blank" rel="noopener">AyuVerse</a></h3>
+      <p class="rtype">Website</p>
+      <p>Community-built free JEE platform: structured notes, solved PYQs, timed practice tests and formula sheets — no paywall at all.</p>
+    </div>
+
+  </div>
+</div>
+</section>
+
+  <section id="one-liners"><div class="wrap"><div class="section-head"><h2><span class="num">09 / ONE-LINERS</span>250 rapid-recall lines</h2><p>Formulae, facts and traps in one line each — for the last week before the exam. Type to filter instantly.</p></div>
+    <input type="search" id="olSearch" class="searchbar" placeholder="Search one-liners — e.g. Carnot, hybridisation, locus&#8230;" aria-label="Search one-liners">
+    <p class="search-note" id="olNote">250 one-liners.</p>
+    <ol class="ol-list" id="olList"></ol>
+  </div></section>
+
+
 <!-- ==================== #topics — topic library (study material) ==================== -->
 <section class="topic-lib-sec" id="topics" aria-label="Study material by topic">
 <div style="max-width:1180px;margin:0 auto;padding:0 20px">
@@ -152,6 +548,8 @@
 <div id="topic-lib"></div>
 </div>
 </section>
+<script src="assets/mcq-bank-jee.js"></script>
+<script src="assets/oneliners-jee.js"></script>
 <script src="assets/topics-jee.js"></script>
 <script src="assets/topics.js"></script>
 <section class="eph-comments" id="comments" aria-label="Comments and suggestions">
@@ -188,4 +586,84 @@
   } else { load(); }
 })();
 </script>
+
+<script>
+(function(){
+  "use strict";
+  function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+
+  /* ---- chapter search ---- */
+  var cs=document.getElementById('chapterSearch');
+  if(cs){
+    var arts=Array.prototype.slice.call(document.querySelectorAll('#study-material article.chapter'));
+    var note=document.getElementById('chapterSearchNote');
+    cs.addEventListener('input',function(){
+      var q=cs.value.trim().toLowerCase(),shown=0;
+      arts.forEach(function(a){
+        var hit=!q||a.textContent.toLowerCase().indexOf(q)>-1;
+        a.style.display=hit?'':'none'; if(hit)shown++;
+      });
+      note.textContent=q?(shown?shown+' of 14 chapters match “'+cs.value.trim()+'”.':'No chapters match — try another keyword.'):'14 chapters · Physics 1–4, Chemistry 5–7, Maths 8–12, formula sheets & tactics 13–14.';
+    });
+  }
+
+  /* ---- one-liners ---- */
+  var olData=window.JEE_ONELINERS||[];
+  var olList=document.getElementById('olList'), olNote=document.getElementById('olNote'), olS=document.getElementById('olSearch');
+  function renderOl(q){
+    q=(q||'').trim().toLowerCase();
+    var out=[],shown=0;
+    olData.forEach(function(line){
+      if(q&&line.toLowerCase().indexOf(q)<0)return;
+      shown++; if(shown>400)return;
+      out.push('<li>'+esc(line)+'</li>');
+    });
+    olList.innerHTML=out.join('')||'<li>No one-liners match — try another keyword.</li>';
+    olNote.textContent=q?(shown+' of 250 one-liners match “'+(olS.value.trim())+'”.'):'250 one-liners.';
+  }
+  if(olList){renderOl('');olS.addEventListener('input',function(){renderOl(olS.value);});}
+
+  /* ---- practice bank ---- */
+  var bank=window.JEE_MCQ_BANK||[];
+  var qBox=document.getElementById('pbQuestions');
+  var answered=0,correct=0;
+  function updateStatus(){
+    document.getElementById('pbScore').textContent=correct;
+    document.getElementById('pbAnswered').textContent=answered;
+  }
+  function shuffled(arr){arr=arr.slice();for(var i=arr.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=arr[i];arr[i]=arr[j];arr[j]=t;}return arr;}
+  function startSet(){
+    if(!bank.length){qBox.innerHTML='<p class="session-note">Question bank failed to load — check your connection and refresh.</p>';return;}
+    answered=0;correct=0;updateStatus();
+    var subj=document.getElementById('pbSubject').value;
+    var n=parseInt(document.getElementById('pbCount').value,10)||20;
+    var pool=subj==='all'?bank:bank.filter(function(m){return m.topic.indexOf(subj)===0;});
+    var set=shuffled(pool).slice(0,Math.min(n,pool.length));
+    var out=[];
+    set.forEach(function(m,i){
+      var opts=m.options.map(function(o,k){return '<button class="option" data-i="'+k+'">'+esc(o)+'</button>';}).join('');
+      out.push('<article class="question" data-answer="'+m.answer+'"><h3>'+(i+1)+'. '+esc(m.q)+'</h3><p class="topic-tag">'+esc(m.topic)+'</p><div class="options">'+opts+'</div><p class="explain"><b>'+esc(m.options[m.answer])+'.</b> '+esc(m.explanation)+'</p></article>');
+    });
+    qBox.innerHTML=out.join('');
+    Array.prototype.forEach.call(qBox.querySelectorAll('.question'),function(qEl){
+      Array.prototype.forEach.call(qEl.querySelectorAll('.option'),function(opt){
+        opt.addEventListener('click',function(){
+          if(qEl.classList.contains('answered'))return;
+          qEl.classList.add('answered');answered++;
+          var ans=parseInt(qEl.getAttribute('data-answer'),10);
+          qEl.querySelectorAll('.option')[ans].classList.add('correct');
+          var exp=qEl.querySelector('.explain');if(exp)exp.style.display='block';
+          if(parseInt(opt.getAttribute('data-i'),10)===ans){correct++;}else{opt.classList.add('wrong');}
+          Array.prototype.forEach.call(qEl.querySelectorAll('.option'),function(o){o.disabled=true;});
+          updateStatus();
+        });
+      });
+    });
+    document.getElementById('practice-bank').scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  var s1=document.getElementById('pbStart'),s2=document.getElementById('pbShuffle');
+  if(s1){s1.addEventListener('click',startSet);s2.addEventListener('click',startSet);}
+})();
+</script>
+
 </body></html>
